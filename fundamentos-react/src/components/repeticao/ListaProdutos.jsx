@@ -1,6 +1,6 @@
 import React from "react"
 import produtos from "../../data/produtos"
-import '../layout/ListaProdutos.css'
+import '../../layout/ListaProdutos.css'
 
 var produtosInfo = produtos.map((produto)=>{
     return <tr key={produto.id}>
@@ -10,7 +10,7 @@ var produtosInfo = produtos.map((produto)=>{
             </tr>
 });
 
-export default (props) =>{
+export default function ListaProdutos(props){
     return(
     <table className="produtos">
         <thead>

@@ -4,12 +4,8 @@ export default (props)=>{
 
     return(
         <div>
-            {
-            isPar?
-                <span><strong>Par</strong></span>
-                    : 
-                <span><strong>Impar</strong></span>
-            }
+            {isPar? <span><strong>Par</strong></span>: 
+            <span><strong>Impar</strong></span>}
         </div>
     )
 }

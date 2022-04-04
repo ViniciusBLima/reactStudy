@@ -9,14 +9,31 @@ import MembroFamilia from './components/basicos/MembroFamilia';
 import ListaAlunos from './components/repeticao/ListaAlunos';
 import ListaProdutos from './components/repeticao/ListaProdutos';
 import ParOuImpar from './components/condicional/ParOuImpar';
+import UsuarioInfo from './components/basicos/UsuarioInfo';
+import DiretaPai from './components/comunicacao/DiretaPai';
+import IndiretaPai from './components/comunicacao/IndiretaPai';
 
 //POSSO PASSAR UMA FUNÇÃO ANONIMA, OU ARROW FUNCTION, OU ATÉ MESMO UMA FUNÇÃO SEM PARAMETROS NENHUM
 
-export default (props) => {
+export default function App(props){
     return (
         <div className='App'>
             <div className="CardHolder">
-                <Card titulo="#7 Redenrização condicional" color="#858264">
+                <Card titulo="#8 Comunicação indireta" color="#777777">
+                    <IndiretaPai/>
+               </Card>
+
+
+                <Card titulo="#8 Comunicação direta" color="#654321">
+                    <DiretaPai/>
+               </Card>
+
+                <Card titulo="#7 Redenrização Componente" color="#123456">
+                    <UsuarioInfo nome="Vinicius"/>
+                    <UsuarioInfo /> 
+               </Card>
+
+                <Card titulo="#7 Redenrização condicional" color="#845264">
                     <ParOuImpar numero="11"/>
                 </Card>
                 
