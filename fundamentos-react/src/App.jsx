@@ -12,60 +12,75 @@ import ParOuImpar from './components/condicional/ParOuImpar';
 import UsuarioInfo from './components/basicos/UsuarioInfo';
 import DiretaPai from './components/comunicacao/DiretaPai';
 import IndiretaPai from './components/comunicacao/IndiretaPai';
+import Input from './components/formulario/input';
+import Contador from './components/contador/view'
+import Megasena from './components/mega/megasena';
 
 //POSSO PASSAR UMA FUNÇÃO ANONIMA, OU ARROW FUNCTION, OU ATÉ MESMO UMA FUNÇÃO SEM PARAMETROS NENHUM
 
-export default function App(props){
+export default function App(props) {
     return (
         <div className='App'>
             <div className="CardHolder">
-                <Card titulo="#8 Comunicação indireta" color="#777777">
-                    <IndiretaPai/>
-               </Card>
 
+                <Card titulo="#13 Desafio mega-sena" color="#aaccdd">
+                    <Megasena/>
+                </Card>
 
-                <Card titulo="#8 Comunicação direta" color="#654321">
-                    <DiretaPai/>
-               </Card>
+                <Card titulo="#12 Contador componentizado" color="#36bc32">
+                    <Contador valor={10} />
+                </Card>
 
-                <Card titulo="#7 Redenrização Componente" color="#123456">
-                    <UsuarioInfo nome="Vinicius"/>
-                    <UsuarioInfo /> 
-               </Card>
+                <Card titulo="#11 Componente controlado" color="#a37592">
+                    <Input />
+                </Card>
+
+                <Card titulo="#10 Comunicação indireta" color="#777777">
+                    <IndiretaPai />
+                </Card>
+
+                <Card titulo="#9 Comunicação direta" color="#654321">
+                    <DiretaPai />
+                </Card>
+
+                <Card titulo="#8 Redenrização Componente" color="#123456">
+                    <UsuarioInfo nome="Vinicius" />
+                    <UsuarioInfo />
+                </Card>
 
                 <Card titulo="#7 Redenrização condicional" color="#845264">
-                    <ParOuImpar numero="11"/>
+                    <ParOuImpar numero="11" />
                 </Card>
-                
+
                 <Card titulo="#6 Desafio de repetição com produtos" color="#3656db">
-                    <ListaProdutos/>
+                    <ListaProdutos />
                 </Card>
 
                 <Card titulo="#5 Repetição" color="#ff8924">
-                    <ListaAlunos/>
+                    <ListaAlunos />
                 </Card>
 
                 <Card titulo="#4 Familia" color="#004488">
                     <Familia sobrenome="Ferreira">
-                        <MembroFamilia nome="Pedro"/>
-                        <MembroFamilia nome="Vinicius"/>
-                        <MembroFamilia nome="Gustavo"/>
+                        <MembroFamilia nome="Pedro" />
+                        <MembroFamilia nome="Vinicius" />
+                        <MembroFamilia nome="Gustavo" />
                     </Familia>
                 </Card>
 
                 <Card titulo="#3 Desafio Aleatório" color="#588744">
-                    <Aleatorio min={1} max={100}/>
+                    <Aleatorio min={1} max={100} />
                 </Card>
 
                 <Card titulo="#2 Primeiro componente com props" color="#E0DC71">
-                    <Teste titulo="titulo teste prop" subtitulo="subtitulo teste prop"/>
+                    <Teste titulo="titulo teste prop" subtitulo="subtitulo teste prop" />
                 </Card>
-                
+
                 <Card titulo="#1 Primeiro componente" color="#9C5E99">
-                    <Primeiro/>
+                    <Primeiro />
                 </Card>
-                
-                
+
+
             </div>
-        </div>    )
+        </div>)
 }

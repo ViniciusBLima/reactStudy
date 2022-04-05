@@ -5,12 +5,14 @@ import Condicao from "../condicional/If";
 export default function IndiretaPai(props){
 
     var [pai, setPai] = useState({})
+    console.log(pai)
 
-    //useState, deixa o calor flexivel conforme ocorra alterações.
+    //useState, deixa o valor flexivel conforme ocorra alterações.
 
     function ReceberInfo(nome, idade, esperto){
         //utilizo o setPai para alterar o valor de pai
         setPai({ nome: nome, idade: idade, esperto: esperto })
+        console.log(pai)
 
     }
 
